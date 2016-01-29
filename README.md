@@ -8,4 +8,4 @@
     - Run -> Edit Configurations...
     - Add a new Application configuration
     - Main Class: ```io.vertx.core.Launcher```
-    - Program arguments (using the server.js as an example): ```run ./src/main/resources/server.js -cluster```
+    - Program arguments (using the server.js as an example): ```run ./frontend-js/src/main/resources/server.js -cluster```

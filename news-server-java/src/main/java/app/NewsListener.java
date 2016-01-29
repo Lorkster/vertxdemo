@@ -1,4 +1,5 @@
 package app;
+
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.EventBus;
 import util.Runner;

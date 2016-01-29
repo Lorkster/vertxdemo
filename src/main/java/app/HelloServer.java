@@ -4,10 +4,10 @@ import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import util.Runner;
 
-public class Server extends AbstractVerticle {
+public class HelloServer extends AbstractVerticle {
 
     public static void main(String... args) {
-        Runner.runClusteredExample(Server.class);
+        Runner.runClusteredExample(HelloServer.class);
     }
 
     @Override

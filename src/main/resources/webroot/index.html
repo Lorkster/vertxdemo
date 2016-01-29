@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vert.x - Demo</title>
+
+    <script src="js/vendor/sockjs.min.js"></script>
+    <script src="js/vendor/vertx-eventbus.js"></script>
+    <script src="js/vendor/jquery-2.2.0.js"></script>
+
+
+</head>
+<body>
+<pre>
+
+    Messages received on browser handler:
+
+</pre>
+
+<hr />
+
+<div id="received" class="innerbox" style="width: 400px; height: 275px;"></div>
+<script>
+    // bridge directly to the data storage service
+    var eb = new EventBus(window.location.protocol + '//' + window.location.host + '/eventbus');
+
+    eb.onopen = function () {
+        eb.registerHandler('news-feed', function (err, msg) {
+            console.log("*");
+            if (!err) {
+                $('#received').append(msg.body + "<br/>");
+            }
+        });
+
+    };
+</script>
+</body>
+</html>

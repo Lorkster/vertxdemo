@@ -11,8 +11,6 @@ var opts = {
     outboundPermitteds: [{address: 'news-feed'}]
 };
 
-var cache = 86400;
-
 // Create the event bus bridge and add it to the router.
 router.route('/eventbus/*').handler(SockJSHandler.create(vertx).bridge(opts).handle);
 

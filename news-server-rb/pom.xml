@@ -9,16 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>news-server-js</artifactId>
+    <artifactId>news-server-rb</artifactId>
 
     <properties>
-        <main.verticle>app/news_server.js</main.verticle>
+        <main.verticle>app/news_server.rb</main.verticle>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.vertx</groupId>
-            <artifactId>vertx-lang-js</artifactId>
+            <artifactId>vertx-lang-ruby</artifactId>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
@@ -27,11 +27,6 @@
     </dependencies>
 
     <build>
-        <resources>
-            <resource>
-                <directory>${project.basedir}/src/main/js</directory>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

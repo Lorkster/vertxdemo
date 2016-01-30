@@ -28,6 +28,7 @@
         <module>news-server-java</module>
         <module>news-server-js</module>
         <module>frontend-js</module>
+        <module>news-server-rb</module>
     </modules>
 
     <dependencies>
@@ -46,6 +47,10 @@
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-lang-js</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-lang-ruby</artifactId>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
@@ -125,7 +130,7 @@
                     <version>2.7</version>
                     <executions>
                         <execution>
-                            <id>add-groovy-sources</id>
+                            <id>add-ruby-sources</id>
                             <phase>prepare-package</phase>
                             <goals>
                                 <goal>copy-resources</goal>
@@ -134,7 +139,7 @@
                                 <outputDirectory>${project.build.outputDirectory}</outputDirectory>
                                 <resources>
                                     <resource>
-                                        <directory>${project.basedir}/src/main/groovy</directory>
+                                        <directory>${project.basedir}/src/main/rb</directory>
                                     </resource>
                                 </resources>
                             </configuration>

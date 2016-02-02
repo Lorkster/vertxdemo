@@ -1,8 +1,8 @@
-package main.groovy.app
+package app
 
 import io.vertx.core.AbstractVerticle
 import io.vertx.core.eventbus.EventBus
-import main.groovy.util.Runner
+import util.Runner
 
 /**
  * Created by jonathan on 2016-02-01.

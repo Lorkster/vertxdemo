@@ -12,7 +12,7 @@
     <artifactId>news-server-groovy</artifactId>
 
     <properties>
-        <main.verticle>app.NewsServer</main.verticle>
+        <main.verticle>app/NewsServer.groovy</main.verticle>
     </properties>
 
     <build>

@@ -1,9 +1,9 @@
-package main.groovy.app
+package app
 
 import io.vertx.core.AbstractVerticle
 import io.vertx.core.Future
 import io.vertx.core.eventbus.EventBus
-import main.groovy.util.Runner
+import util.Runner
 
 /**
  * Created by jonathan on 2016-01-29.
@@ -21,7 +21,8 @@ class NewsServer extends AbstractVerticle{
         EventBus eb = vertx.eventBus()
         // Send a message every second
         vertx.setPeriodic(1000, {
-            eb.publish("news-feed", "Some news about Groovy!")
+            eb.publish("news-feed", "Some news from Groovy!")
         })
+        println "Ready to send news from Groovy!"
     }
 }

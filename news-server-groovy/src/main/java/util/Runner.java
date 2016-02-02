@@ -1,4 +1,4 @@
-package main.groovy.util;
+package util;
 
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;

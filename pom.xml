@@ -29,6 +29,7 @@
         <module>news-server-js</module>
         <module>frontend-js</module>
         <module>news-server-rb</module>
+        <module>news-server-groovy</module>
     </modules>
 
     <dependencies>
@@ -51,6 +52,10 @@
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-lang-ruby</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-lang-groovy</artifactId>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>

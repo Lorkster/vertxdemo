@@ -1,0 +1,11 @@
+<assembly>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <includes>
+                <include>${project.artifactId}-${project.version}-fat.jar</include>
+            </includes>
+            <outputDirectory>.</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

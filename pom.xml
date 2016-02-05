@@ -134,6 +134,9 @@
                                         <descriptor>assembly.xml</descriptor>
                                     </assembly>
                                 </build>
+                                <run>
+                                    <cmd>java -jar /opt/vertx/${project.artifactId}-${project.version}-fat.jar -cluster</cmd>
+                                </run>
                             </image>
                         </images>
                     </configuration>

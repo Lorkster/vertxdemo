@@ -16,16 +16,19 @@
 * Run: `mvn package`
 * Run the *-fat.jar for each respective module, for example: 
 `java -jar java -jar target/news-server-rb-1.0-SNAPSHOT-fat.jar -cp target/classes -cluster`  
+
+# Docker Maven
+  * `mvn clean package` in project root or any module, or `mvn docker:build` in any module (still needs `mvn package`to have been run). 
+  * For each module you want to deploy in Docker run: `mvn docker:start`
+  * To stop, simply do `mvn docker:stop` in the same module.
+  * Alternatively you can use the Docker command line and start with:
+    * `docker run -t -i -p 8080:8080 vertxdemo/frontend-js:1.0-SNAPSHOT`
+    * `docker run -t -i vertxdemo/news-server-java:1.0-SNAPSHOT`
   
-# Docker
-  * Initially no Maven support
+# Docker Command Line
   * Currently hardcoded to a specific version of the fat jar, check in `Dockerfile`.
   * Install Docker... <https://www.docker.com/products/docker-toolbox>
   * Build by moving the each respective module and execute for example `docker build -t vertxdemo/frontend-js .`
   * Run with for example `docker run -t -i -P -p 8080:8080 vertxdemo/frontend-js`
   * Check your Docker container for it's ip and access frontend at that address i.e. <http://xxx.xxx.xxx.xxx:8080>.
   
-# Docker Maven
-  * `mvn clean package` in project root or any module, or `mvn docker:build` in any module. 
-  * `docker run -t -i -P -p 8080:8080 vertxdemo/frontend-js:1.0-SNAPSHOT`
-  * `docker run -t -i -P vertxdemo/news-server-java:1.0-SNAPSHOT`

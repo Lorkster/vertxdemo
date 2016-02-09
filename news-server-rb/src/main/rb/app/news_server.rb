@@ -1,5 +1,6 @@
 require 'vertx/vertx'
 options = {
+    'haEnabled' => true
 }
 Vertx::Vertx.clustered_vertx(options) { |res_err,res|
   if (res_err == nil)

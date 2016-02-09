@@ -48,7 +48,7 @@
                 <configuration>
                     <images>
                         <image>
-                            <name>vertxdemo/${project.artifactId}:${project.version}</name>
+                            <name>${docker.namespace}/${project.artifactId}:${project.version}</name>
                             <build>
                                 <from>java:8</from>
                                 <tags>
@@ -71,7 +71,7 @@
                                 </assembly>
                             </build>
                             <run>
-                                <cmd>java -jar /opt/vertx/${project.artifactId}-${project.version}-fat.jar -cluster</cmd>
+                                <cmd>java -jar /opt/vertx/${project.artifactId}-${project.version}-fat.jar -ha</cmd>
                                 <ports>
                                     <port>8080:8080</port>
                                 </ports>

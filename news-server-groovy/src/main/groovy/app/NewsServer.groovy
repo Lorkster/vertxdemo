@@ -12,7 +12,7 @@ import util.Runner
 class NewsServer extends AbstractVerticle{
 
     public static void main (String... args){
-        Runner.runClusteredExample(NewsServer.class)
+        Runner.runHaExample(NewsServer.class)
     }
 
     @Override

@@ -15,6 +15,7 @@ public class NewsServer extends AbstractVerticle {
     public void start(Future<Void> fut) {
         EventBus eb = vertx.eventBus();
         // Send a message every second
-        vertx.setPeriodic(1000, v -> eb.publish("news-feed", "Some news about JAVA!"));
+        System.out.println("Ready to send news from JAVA!");
+        vertx.setPeriodic(1000, v -> eb.publish("news-feed", "Some news from JAVA!"));
     }
 }

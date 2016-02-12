@@ -1,18 +1,8 @@
-require 'vertx/vertx'
-options = {
-    'haEnabled' => true
-}
-Vertx::Vertx.clustered_vertx(options) { |res_err,res|
-  if (res_err == nil)
-    vertx = res
-    eventBus = vertx.event_bus()
-    puts "Ready to send news from Ruby!"
+require "vertx/vertx"
+include Vertx
 
-    # Send a message every second
-    vertx.set_periodic(1000) { |v|
-      eventBus.publish("news-feed", "Some news from Ruby!")
-    }
-  else
-    puts "Failed: #{res_err}"
-  end
-}
+puts("Ready to send news from Ruby!")
+$vertx::set_periodic(1000) do
+  eventBus = $vertx.event_bus()
+  eventBus.publish("news-feed", "News from Ruby!")
+end

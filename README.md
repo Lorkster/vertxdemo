@@ -39,3 +39,7 @@ usage not work. Just a heads up.
   * Run with for example `docker run -t -i -P -p 8080:8080 vertxdemo/frontend-js`
   * Check your Docker container for it's ip and access frontend at that address i.e. <http://xxx.xxx.xxx.xxx:8080>.
   
+## Docker Compose
+  * A simple docker-compose setup exists in the project root. While standing in root, calling `docker-compose up` will start
+  all modules, using the `Dockerfile` files as settings.
+  

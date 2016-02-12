@@ -1,0 +1,12 @@
+frontend-js:
+  build: ./frontend-js
+  ports:
+     - "8080:8080"
+news-server-groovy:
+  build: ./news-server-groovy
+news-server-java:
+  build: ./news-server-java
+news-server-js:
+  build: ./news-server-js
+news-server-rb:
+  build: ./news-server-rb

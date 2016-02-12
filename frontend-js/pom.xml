@@ -49,6 +49,7 @@
                     <images>
                         <image>
                             <name>${docker.namespace}/${project.artifactId}:${project.version}</name>
+                            <alias>${project.artifactId}</alias>
                             <build>
                                 <from>java:8</from>
                                 <tags>

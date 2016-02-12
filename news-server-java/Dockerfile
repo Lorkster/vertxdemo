@@ -13,4 +13,4 @@ COPY target/$VERTICLE_FILE $VERTICLE_HOME/
 # Launch the verticle
 WORKDIR $VERTICLE_HOME
 ENTRYPOINT ["sh", "-c"]
-CMD ["java -jar $VERTICLE_FILE -cluster"]
+CMD ["java -jar $VERTICLE_FILE -ha"]

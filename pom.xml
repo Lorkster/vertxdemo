@@ -198,6 +198,15 @@
                     <generatedSourcesDirectory>${project.basedir}/src/main/generated</generatedSourcesDirectory>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.jolokia</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <configuration>
+                    <!-- Call it only in subprojects -->
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

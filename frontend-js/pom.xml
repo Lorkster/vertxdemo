@@ -45,6 +45,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <skip>false</skip>
                     <images>
                         <image>
                             <name>${docker.namespace}/${project.artifactId}:${project.version}</name>

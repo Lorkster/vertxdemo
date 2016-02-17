@@ -1,0 +1,7 @@
+**/*.iml
+**/*.xml
+**/target/classes/
+**/target/docker/
+**/target/maven-archiver/
+**/target/**SNAPSHOT.jar
+**/src/

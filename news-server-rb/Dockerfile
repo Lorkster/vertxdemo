@@ -1,4 +1,4 @@
-FROM java:8
+FROM expertsystems/oracle-jdk8
 
 ENV VERTICLE_FILE news-server-rb-1.0-SNAPSHOT-fat.jar
 

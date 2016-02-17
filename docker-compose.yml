@@ -2,6 +2,11 @@ frontend-js:
   build: ./frontend-js
   ports:
      - "8080:8080"
+  #links:
+    #- news-server-groovy:news-server-groovy
+    #- news-server-java:news-server-java
+    #- news-server-js:news-server-js
+    #- news-server-rb:news-server-rb
 news-server-groovy:
   build: ./news-server-groovy
 news-server-java:

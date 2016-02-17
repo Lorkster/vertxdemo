@@ -4,9 +4,9 @@ ENV MYSQL_ROOT_PASSWORD vertxdemo_pw
 ENV MYSQL_PASSWORD vertxdemo_pw
 ENV MYSQL_DATABASE vertxdemo_data
 
-# this need to stay the same for script to work
+# this user need to stay the same for script to work
 ENV MYSQL_USER mysql
-COPY ./create_db.sql /docker-entrypoint-initdb.d/create_db.sql
+COPY ./create_and_populate_db.sql /docker-entrypoint-initdb.d/create_and_populate_db.sql
 
 COPY ./localdb-run.sh /
 RUN chmod 755 /localdb-run.sh

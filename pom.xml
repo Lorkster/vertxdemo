@@ -22,11 +22,17 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>se.findout</groupId>
+                <artifactId>db-service-java</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <modules>
         <module>news-server-java</module>
+        <module>db-service-java</module>
         <module>news-server-js</module>
         <module>frontend-js</module>
         <module>news-server-rb</module>
@@ -61,6 +67,14 @@
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-jdbc-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-service-proxy</artifactId>
         </dependency>
     </dependencies>
 

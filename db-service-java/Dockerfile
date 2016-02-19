@@ -5,8 +5,6 @@ ENV VERTICLE_FILE db-service-java-1.0-SNAPSHOT-fat.jar
 # Set the location of the verticles
 ENV VERTICLE_HOME /usr/verticles
 
-#EXPOSE 8080
-
 # Copy your fat jar to the container
 COPY target/$VERTICLE_FILE $VERTICLE_HOME/
 

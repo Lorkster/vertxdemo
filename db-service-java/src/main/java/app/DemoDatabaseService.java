@@ -1,5 +1,6 @@
 package app;
 
+import io.vertx.codegen.annotations.ProxyClose;
 import io.vertx.codegen.annotations.ProxyGen;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
@@ -22,4 +23,7 @@ public interface DemoDatabaseService {
     // Actual service operations here...
     void save(String collection, JsonObject document,
               Handler<AsyncResult<Void>> resultHandler);
+
+    @ProxyClose
+    void close();
 }

@@ -28,7 +28,7 @@ Vert.x usage of Hazelcast for setting up discovery etc).
 
 
 ### Docker Mysql
-  * Navigate to the database directory.
+  * Navigate to the database` directory.
   * Either just use `docker pull vertxdemo/mysql:latest` to fetch an already pushed container, or build your own 
   with `docker build -t vertxdemo/mysql:latest .`
   * Start with `docker run -p 3306:3306 --name vertxdemo-mysql -v /path/to/my/data:/var/lib/mysql -d vertxdemo/mysql:latest .`
@@ -48,6 +48,11 @@ Vert.x usage of Hazelcast for setting up discovery etc).
     * `docker run -t -i -p 8080:8080 vertxdemo/frontend-js:1.0-SNAPSHOT`
     * `docker run -t -i vertxdemo/news-server-java:1.0-SNAPSHOT`
   * Check your Docker container for it's ip and access frontend at that address i.e. <http://xxx.xxx.xxx.xxx:8080>.  
+
+#### db-service-java
+  This module demonstrates both proxying of remote services, linking containers and using external configuration of environment variables.
+  It should be run using either `mvn docker:start` or the command line equivalent: 
+  `docker run -t -i --link vertxdemo-mysql:db --env-file ./dev.env.properties vertxdemo/db-service-java:1.0-SNAPSHOT`
   
   
 ### Docker Compose

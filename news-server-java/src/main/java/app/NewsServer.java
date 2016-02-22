@@ -17,6 +17,7 @@ public class NewsServer extends AbstractVerticle {
 
     @Override
     public void start(Future<Void> fut) {
+        //Get a reference to the database service
         service = ProxyHelper.createProxy(DemoDatabaseService.class, vertx, DemoDatabaseService.ADDRESS);
         EventBus eb = vertx.eventBus();
         // Send a message every second

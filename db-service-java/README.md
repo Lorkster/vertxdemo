@@ -1,7 +1,7 @@
 # Database microservice in Java
 This module creates a very simple database service in Vert.x, using Java, and exposes it using Vert.x proxy technology. 
 It demonstrates proxying of remote services, linking containers and using external configuration (by using the `--env-file` flag when running Docker) 
-of environment variables.
+of environment variables. The entries in `dev.env.properties` will be exposed as environment properties in the Docker container.
 
 ## Build Instructions
 

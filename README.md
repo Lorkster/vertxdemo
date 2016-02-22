@@ -28,7 +28,7 @@ Vert.x usage of Hazelcast for setting up discovery etc).
 
 
 ### Docker Mysql
-  The project contains a `Dockerfile` to run a custom MySql container. Please see documentation here [/database/README.md](README.md)
+  The project contains a `Dockerfile` to run a custom MySql container. Please see documentation here [README.md](/database/README.md)
 
 
 ### Docker Maven

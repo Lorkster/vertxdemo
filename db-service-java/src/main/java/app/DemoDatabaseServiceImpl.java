@@ -20,6 +20,9 @@ public class DemoDatabaseServiceImpl implements DemoDatabaseService {
         final String password = System.getenv("MYSQL_PASSWORD");
         final String database = System.getenv("MYSQL_DATABASE");
         final String db_port = System.getenv("DB_PORT");
+        if (db_port == null) {
+            throw new RuntimeException("DB_PORT was null. This indicates the environment properties created by Docker is missing.");
+        }
         final String db_port_num = db_port.split(":")[2];
         final String tcpAddr = System.getenv("DB_PORT_"+db_port_num+"_TCP_ADDR");
 

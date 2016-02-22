@@ -13,7 +13,7 @@ public class DemoDatabaseServiceVerticle extends AbstractVerticle {
     MessageConsumer<JsonObject> consumer;
 
     public static void main(String... args) {
-        Runner.runClusteredExample(DemoDatabaseServiceVerticle.class);
+        Runner.runHaExample(DemoDatabaseServiceVerticle.class);
     }
 
     @Override

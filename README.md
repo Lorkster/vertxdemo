@@ -6,7 +6,7 @@
     3. [Run Instructions](#run-instructions)
     4. [Docker Compose](#docker-compose)
 3. Sub Modules
-    1. [Database](/database/README.md)
+    1. [Database](/database/)
     2. [Front End](/frontend-js/README.md)
     3. [News Server Java](/news-server-java/README.md)
     4. [Database Service Java](/db-service-java/README.md)

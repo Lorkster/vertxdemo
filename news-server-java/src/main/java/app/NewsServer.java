@@ -4,7 +4,6 @@ import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.json.JsonObject;
-import io.vertx.serviceproxy.ProxyHelper;
 import util.Runner;
 
 public class NewsServer extends AbstractVerticle {
@@ -17,7 +16,8 @@ public class NewsServer extends AbstractVerticle {
 
     @Override
     public void start(Future<Void> fut) {
-        service = ProxyHelper.createProxy(DemoDatabaseService.class, vertx, DemoDatabaseService.ADDRESS);
+        //Get a reference to the database service
+        service = DemoDatabaseService.createProxy(vertx, DemoDatabaseService.ADDRESS);
         EventBus eb = vertx.eventBus();
         // Send a message every second
         System.out.println("Ready to send news from JAVA!");

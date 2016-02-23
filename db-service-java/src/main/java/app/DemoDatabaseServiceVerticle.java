@@ -13,12 +13,12 @@ public class DemoDatabaseServiceVerticle extends AbstractVerticle {
     MessageConsumer<JsonObject> consumer;
 
     public static void main(String... args) {
-        Runner.runClusteredExample(DemoDatabaseServiceVerticle.class);
+        Runner.runHaExample(DemoDatabaseServiceVerticle.class);
     }
 
     @Override
     public void start(Future<Void> fut) {
-        service = new DemoDatabaseServiceImpl(vertx);
+        service = DemoDatabaseService.create(vertx);
         consumer = ProxyHelper.registerService(DemoDatabaseService.class, vertx, service, DemoDatabaseService.ADDRESS);
 
     }

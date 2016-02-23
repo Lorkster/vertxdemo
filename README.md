@@ -7,12 +7,12 @@
     4. [Docker Compose](#docker-compose)
 3. Sub Modules
     1. [Database](/database/)
-    2. [Front End](/frontend-js/README.md)
-    3. [News Server Java](/news-server-java/README.md)
-    4. [Database Service Java](/db-service-java/README.md)
-    5. [News Server Groovy](/news-server-groovy/README.md)
-    6. [News Server JavaScript](/news-server-js/README.md)
-    7. [News Server Ruby](/news-server-rb/README.md)
+    2. [Front End](/frontend-js/)
+    3. [News Server Java](/news-server-java/)
+    4. [Database Service Java](/db-service-java/)
+    5. [News Server Groovy](/news-server-groovy/)
+    6. [News Server JavaScript](/news-server-js/)
+    7. [News Server Ruby](/news-server-rb/)
 
 # VertxDemo
 This project aims to demonstrate a minimal working asynchronous microservice architecture, using [Vert.x](http://vertx.io/) 

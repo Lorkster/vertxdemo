@@ -19,7 +19,7 @@ The [Dockerfile](/Dockerfile)  in the module mirrors Docker settings in `pom.xml
 * `docker run -t -i -p 8080:8080 vertxdemo/frontend-js:1.0-SNAPSHOT`
 
 ### Using IntelliJ
-
+* Requires a Java 8 version higher than _42.
 * Run JS verticles in IntelliJ by creating a Run task:
     - Run -> Edit Configurations...
     - Add a new Application configuration

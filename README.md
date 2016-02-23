@@ -1,3 +1,10 @@
+# Table of contents
+1. [Introduction](#vertxdemo)
+2. [Requirements](##requirements)
+3. [Build Instructions](##build-instructions)
+4. [Run Instructions](##run-instructions)
+5. [Docker Compose](###docker-compose)
+
 # VertxDemo
 This project aims to demonstrate a minimal working asynchronous microservice architecture, using [Vert.x](http://vertx.io/) 
 and [Docker](https://www.docker.com/) as the main technological choices.

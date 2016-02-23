@@ -18,7 +18,7 @@ public class DemoDatabaseServiceVerticle extends AbstractVerticle {
 
     @Override
     public void start(Future<Void> fut) {
-        service = new DemoDatabaseServiceImpl(vertx);
+        service = DemoDatabaseService.create(vertx);
         consumer = ProxyHelper.registerService(DemoDatabaseService.class, vertx, service, DemoDatabaseService.ADDRESS);
 
     }

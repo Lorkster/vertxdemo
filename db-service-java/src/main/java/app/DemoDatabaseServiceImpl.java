@@ -36,8 +36,6 @@ public class DemoDatabaseServiceImpl implements DemoDatabaseService {
                 .put("database", database
                 );
         client = MySQLClient.createShared(vertx, mySQLClientConfig, "MySQLPool1");
-
-        ;
     }
 
     @Override
